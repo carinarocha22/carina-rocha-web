@@ -1,20 +1,22 @@
-let carrinho = [];
+let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
-function adicionarAoCarrinho(nome, preco){
-  carrinho.push({nome, preco});
-  document.getElementById("contador").innerText = carrinho.length;
-  alert(nome + " adicionado ao carrinho.");
+function adicionarCarrinho(nome, preco) {
+  carrinho.push({ nome, preco });
+  localStorage.setItem("carrinho", JSON.stringify(carrinho));
+  alert("Produto adicionado ao carrinho!");
 }
 
-function toggleAcessibilidade(){
-  document.body.classList.toggle("alto-contraste");
-}
+if (document.getElementById("carrinho-lista")) {
+  let lista = document.getElementById("carrinho-lista");
+  let total = 0;
 
-document.querySelectorAll("button, a, h1, h2, h3, p").forEach(el => {
-  el.addEventListener("mouseover", () => {
-    let texto = el.innerText;
-    let speech = new SpeechSynthesisUtterance(texto);
-    speech.lang = "pt-PT";
-    window.speechSynthesis.speak(speech);
+  carrinho.forEach(item => {
+    let p = document.createElement("p");
+    p.textContent = item.nome + " - " + item.preco + "€";
+    lista.appendChild(p);
+    total += item.preco;
   });
-});
+
+  document.getElementById("total").textContent = "Total: " + total + "€";
+}
+

@@ -1,139 +1,97 @@
-HTML
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beleza Asiática | K-Beauty & J-Beauty Store</title>
+    <title>Mundo Asiático | Experiência Total</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <a href="#conteudo" class="skip-link">Saltar para o conteúdo</a>
 
-    <header role="banner">
-        <div class="logo">BELEZA ASIÁTICA</div>
-        <nav aria-label="Menu Principal">
-            <ul>
-                <li><a href="#novidades">Novidades</a></li>
-                <li><a href="#categorias">Categorias</a></li>
-                <li><a href="#marcas">Marcas</a></li>
-                <li><a href="#lojas">Lojas</a></li>
+    <div class="acc-panel" role="complementary">
+        <button onclick="toggleVoz()" id="btn-voz" aria-label="Ativar guia por voz">🔊 Guia de Voz: OFF</button>
+        <button onclick="toggleContraste()" aria-label="Alternar alto contraste">🌓 Contraste</button>
+    </div>
+
+    <header>
+        <div class="logo">MUNDO <span>ASIÁTICO</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#trends">Trends 🔥</a></li>
+                <li><a href="#produtos">Catálogo</a></li>
+                <li><a href="#lojas">Nossas Lojas 📍</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="conteudo">
-        <section class="hero-premium">
-            <div class="hero-inner">
-                <h1>Hot on Social Media 🔥</h1>
-                <p>Os segredos da pele de porcelana que dominam as redes sociais.</p>
-                <button class="btn-largo">Ver tudo</button>
-            </div>
-        </section>
-
-        <section class="quick-links">
-            <div class="link-item">Trending Now</div>
-            <div class="link-item">Novidades do Mês</div>
-            <div class="link-item">Novas Marcas 🔥</div>
-            <div class="link-item">Cartão Oferta Físico</div>
-        </section>
-
-        <section id="novidades" class="seccao">
-            <h2 class="titulo-seccao">🧴 Cremes para o Rosto (Face)</h2>
-            <div class="grid-produtos">
-                <article class="produto-card">
-                    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=400" alt="Creme SKIN1004 Madagascar Centella">
-                    <h3>SKIN1004 Centella</h3>
-                    <p>Hidratação profunda com ácido hialurónico para pele sensível.</p>
-                    <span class="tag-beneficio">Hidratação & Barrier Care</span>
-                    <button>Adicionar ao Carrinho</button>
+        <section id="trends" class="trends-section">
+            <h2 class="title-glow">Trending Now 🔥</h2>
+            <div class="trends-container">
+                <article class="trend-card">
+                    <div class="trend-badge">#1 TikTok Viral</div>
+                    <img src="https://images.unsplash.com/photo-1590439471364-192aa70c0b53?auto=format&fit=crop&w=400" alt="Bálsamo labial brilhante da Laneige">
+                    <div class="trend-info">
+                        <h3>Lip Sleeping Mask - Berry</h3>
+                        <p>O segredo dos lábios perfeitos que parou a internet.</p>
+                        <button class="btn-buy" onclick="adicionarCarrinho('Lip Mask', 22.00)">Comprar Trend</button>
+                    </div>
                 </article>
 
-                <article class="produto-card">
-                    <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=400" alt="Creme Anua Azelaic Acid">
-                    <h3>Anua Azelaic Acid 10+</h3>
-                    <p>Combate manchas e irritações de forma suave.</p>
-                    <span class="tag-beneficio">Função Específica</span>
-                    <button>Adicionar ao Carrinho</button>
-                </article>
-
-                <article class="produto-card">
-                    <img src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=400" alt="Protetor Beauty of Joseon Sun Rice">
-                    <h3>Beauty of Joseon Sun Rice</h3>
-                    <p>Protetor solar calmante com probióticos.</p>
-                    <span class="tag-beneficio">Proteção Solar</span>
-                    <button>Adicionar ao Carrinho</button>
+                <article class="trend-card">
+                    <div class="trend-badge">Hot Snack</div>
+                    <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=400" alt="Prato de Buldak Ramen ultra picante">
+                    <div class="trend-info">
+                        <h3>Buldak Carbonara Ramen</h3>
+                        <p>O desafio picante mais amado pelos criadores de conteúdo.</p>
+                        <button class="btn-buy" onclick="adicionarCarrinho('Buldak Ramen', 3.50)">Adicionar</button>
+                    </div>
                 </article>
             </div>
         </section>
 
-        <section class="seccao bg-suave">
-            <h2 class="titulo-seccao">🛁 Cuidados de Corpo (Body Care)</h2>
-            <div class="grid-produtos">
-                <article class="produto-card">
-                    <img src="https://images.unsplash.com/photo-1556229167-73fe68097940?auto=format&fit=crop&w=400" alt="Loção Klairs All-Over">
-                    <h3>Klairs All-Over Lotion</h3>
-                    <p>Loção leve e hidratante para o corpo inteiro.</p>
-                    <span class="tag-beneficio">Hidratação Essencial</span>
-                    <button>Adicionar ao Carrinho</button>
-                </article>
-
-                <article class="produto-card">
-                    <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=400" alt="Rich Soymilk Body Cream">
-                    <h3>Rich Soymilk Cream</h3>
-                    <p>Creme de soja rico para deixar o corpo nutrido e suave.</p>
-                    <span class="tag-beneficio">Ingredientes Especiais</span>
-                    <button>Adicionar ao Carrinho</button>
-                </article>
-            </div>
-        </section>
-
-        <section id="marcas" class="seccao">
-            <h2 class="titulo-seccao">Principais Marcas Asiáticas</h2>
-            <div class="grid-marcas">
-                <div class="marca-info">
-                    <h3>COSRX (K-Beauty)</h3>
-                    <p>Foco em ingredientes eficazes como Snail Mucin para reparação e brilho.</p>
+        <section id="lojas" class="stores-section">
+            <h2>Visite o nosso Mundo 📍</h2>
+            <div class="stores-grid">
+                <div class="store-info" role="address">
+                    <h3>Lisboa - Flagship Store</h3>
+                    <p>Rua Augusta, 150 - Baixa Pombalina</p>
+                    <p>🕒 10h - 20h</p>
                 </div>
-                <div class="marca-info">
-                    <h3>Hada Labo (J-Beauty)</h3>
-                    <p>A força do ácido hialurónico para hidratação japonesa profunda.</p>
+                <div class="store-info">
+                    <h3>Porto</h3>
+                    <p>Rua de Santa Catarina, 402</p>
+                    <p>🕒 10h - 22h</p>
                 </div>
-                <div class="marca-info">
-                    <h3>Beauty of Joseon</h3>
-                    <p>Ingredientes tradicionais como arroz e ginseng.</p>
+                <div class="store-info">
+                    <h3>Setúbal</h3>
+                    <p>Avenida Luísa Todi, 22</p>
+                    <p>🕒 09h - 19h</p>
+                </div>
+                <div class="store-info">
+                    <h3>Braga</h3>
+                    <p>Avenida da Liberdade, 88</p>
+                    <p>🕒 10h - 20h</p>
+                </div>
+                <div class="store-info">
+                    <h3>Viana do Castelo</h3>
+                    <p>Praça da República, 12</p>
+                    <p>🕒 10h - 19h</p>
                 </div>
             </div>
-        </section>
-
-        <section id="lojas" class="seccao-lojas">
-            <div class="lojas-txt">
-                <h2>Onde encontrar as nossas Lojas</h2>
-                <p>📍 <strong>Lisboa:</strong> Avenida da Liberdade, 120</p>
-                <p>📍 <strong>Porto:</strong> Rua de Santa Catarina, 450</p>
-                <p>📍 <strong>Online:</strong> Entrega em 24h para todo o país.</p>
+            <div class="map-placeholder" aria-label="Mapa ilustrativo das lojas em Portugal">
+                <p>[Mapa Interativo Ativo - Navegável via Teclado]</p>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Beleza Asiática. Design Acessível nível AAA.</p>
-    </footer>
+    <div class="cart-floating">
+        🛒 Carrinho: <span id="cart-val">0.00</span>€
+    </div>
 
-    <script>
-        const sintetizador = window.speechSynthesis;
-        function ler(texto) {
-            sintetizador.cancel();
-            const fala = new SpeechSynthesisUtterance(texto);
-            fala.lang = 'pt-PT';
-            sintetizador.speak(fala);
-        }
-
-        document.querySelectorAll('h1, h2, h3, p, button, .link-item').forEach(el => {
-            el.addEventListener('mouseenter', () => ler(el.innerText));
-            el.addEventListener('mouseleave', () => sintetizador.cancel());
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

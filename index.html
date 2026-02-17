@@ -1,63 +1,32 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Asian Beauty Store</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Carina Rocha - Mochi Artesanal</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
-<a href="#conteudo" class="skip-link">Saltar para o conteúdo</a>
-
 <header>
-  <h1>Asian Beauty Store</h1>
-  <nav aria-label="Menu principal">
-    <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="produtos.html">Produtos</a></li>
-      <li><a href="carrinho.html">Carrinho (<span id="contador">0</span>)</a></li>
-      <li><a href="acessibilidade.html">Acessibilidade</a></li>
-    </ul>
+  <h1>Carina Rocha</h1>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="produtos.html">Produtos</a>
+    <a href="carrinho.html">Carrinho</a>
   </nav>
 </header>
 
-<main id="conteudo">
-
-<section class="banner">
-  <h2>Descobre o melhor da beleza asiática</h2>
-  <p>Skincare e maquilhagem coreana e japonesa.</p>
+<section class="hero">
+  <h2>Mochi Artesanal Premium</h2>
+  <p>Sabores únicos, textura perfeita, experiência inesquecível.</p>
+  <a href="produtos.html" class="btn">Ver Produtos</a>
 </section>
 
-<section>
-<h2>Mais Vendidos</h2>
+<footer>
+  <p>© 2026 Carina Rocha - Todos os direitos reservados</p>
+</footer>
 
-<div class="grid-produtos">
-
-<div class="produto">
-  <img src="imagens/cosrx.jpg" alt="Essência facial COSRX com mucina de caracol">
-  <h3>COSRX Snail Essence</h3>
-  <p>Essência hidratante regeneradora.</p>
-  <p class="preco">19,99€</p>
-  <button onclick="adicionarAoCarrinho('COSRX Snail Essence',19.99)">Adicionar</button>
-</div>
-
-<div class="produto">
-  <img src="imagens/mochi.jpg" alt="Caixa de mochis japoneses sortidos">
-  <h3>Mochi Mix Box</h3>
-  <p>Seleção de mochis tradicionais japoneses.</p>
-  <p class="preco">12,99€</p>
-  <button onclick="adicionarAoCarrinho('Mochi Mix Box',12.99)">Adicionar</button>
-</div>
-
-</div>
-</section>
-
-</main>
-
-<button class="acessibilidade-btn" onclick="toggleAcessibilidade()">Acessibilidade</button>
-
-<script src="script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
+

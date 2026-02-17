@@ -1,21 +1,35 @@
-// Função para simular abertura de vagas (Usabilidade)
-function abrirVagas() {
-    const localidade = prompt("Para qual cidade desejas candidatar-te? (Lisboa, Porto, Setúbal, Braga, Viana)");
+let contador = 0;
+
+// FUNÇÃO PARA O COMPUTADOR FALAR
+function lerTexto(mensagem) {
+    // Cancela leituras anteriores para não encavalar
+    window.speechSynthesis.cancel();
     
-    if (localidade) {
-        const msg = `Obrigado! Temos 3 vagas abertas para a nossa loja de ${localidade}. Envia o teu CV para recrutamento@mundoasiatico.pt`;
-        alert(msg);
-        falar(msg); // O site lê a mensagem para o utilizador cego
-    }
+    const fala = new SpeechSynthesisUtterance(mensagem);
+    fala.lang = 'pt-PT'; // Voz em Português
+    fala.rate = 1;      // Velocidade normal
+    window.speechSynthesis.speak(fala);
 }
 
-// Melhoria de Acessibilidade: Detetar se o utilizador prefere reduzir movimento
-// (Útil para pessoas com autismo ou epilepsia)
-const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-if (prefersReducedMotion.matches) {
-    document.querySelectorAll('.trend-card').forEach(card => {
-        card.style.transition = 'none';
+// FUNÇÃO INTERATIVA DE COMPRA
+function adicionar(nome) {
+    contador++;
+    document.getElementById('cart-count').innerText = contador;
+    
+    // Feedback visual (Alerta)
+    alert(nome + " foi adicionado ao carrinho!");
+    
+    // Feedback auditivo para cegos
+    lerTexto(nome + " adicionado com sucesso. Você tem " + contador + " itens no carrinho.");
+}
+
+// INTERATIVIDADE DO MENU (Scroll suave)
+document.querySelectorAll('nav a').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        document.querySelector(targetId).scrollIntoView({
+            behavior: 'smooth'
+        });
     });
-}
-
-console.log("Sistema do Mundo Asiático carregado com sucesso!");
+});

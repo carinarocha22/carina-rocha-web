@@ -1,8 +1,6 @@
-document.querySelectorAll("button, a, h1, h2, h3, p").forEach(element => {
-  element.addEventListener("mouseover", () => {
-    let texto = element.innerText;
-    let speech = new SpeechSynthesisUtterance(texto);
-    speech.lang = "pt-PT";
-    window.speechSynthesis.speak(speech);
-  });
-});
+let carrinho = [];
+
+function adicionarAoCarrinho(nome, preco){
+  carrinho.push({nome, preco});
+  alert(nome + " adicionado ao carrinho.");
+}

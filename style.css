@@ -1,26 +1,63 @@
-/* Cores de alto contraste para acessibilidade */
+/* Definições Gerais */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.8;
-    color: #1a1a1a; /* Cinza quase preto para leitura fácil */
-    background-color: #ffffff;
+    color: #222; /* Cinza muito escuro para contraste máximo sobre fundo branco */
+    background-color: #fff;
     margin: 0;
     padding: 20px;
 }
 
-/* Deixar o site bonito em telemóveis */
-main {
-    max-width: 900px;
-    margin: 0 auto;
+/* Acessibilidade: Link de salto escondido, mas que aparece ao usar o TAB */
+.pular-link {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: #000;
+    color: #fff;
+    padding: 10px;
+    z-index: 100;
 }
 
-/* Links fáceis de identificar */
-a {
+.pular-link:focus {
+    top: 0;
+}
+
+/* Menu de Navegação */
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
     color: #0056b3;
-    text-decoration: underline;
+    text-decoration: underline; /* Essencial para daltónicos identificarem que é um link */
     font-weight: bold;
 }
 
-/* Feedback visual para navegação por teclado (fundamental para a nota!) */
-a:focus {
-    outline: 3px solid #ffcc00;
+/* Cartão do Produto */
+.produto {
+    border: 2px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+}
+
+/* Botões chamativos e fáceis de clicar */
+button {
+    background-color: #d1127c;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+button:hover, button:focus {
+    background-color: #a00d5e;
+    outline: 4px solid #ffcc00; /* Destaque visual para navegação por teclado */
+}

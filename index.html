@@ -1,102 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt-PT">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <title>Mundo Asiático | Premium Store</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Asian Beauty Store</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <nav class="navbar">
-        <div class="logo">MUNDO <span>ASIÁTICO</span></div>
-        <ul>
-            <li><a href="#trends">Trends 🔥</a></li>
-            <li><a href="#catalogo">Catálogo 🧴</a></li>
-            <li><a href="#lojas">Lojas 📍</a></li>
-        </ul>
-        <div class="cart-status">🛒 Itens: <span id="cart-count">0</span></div>
-    </nav>
+<a class="skip-link" href="#conteudo">Saltar para o conteúdo</a>
 
-    <section id="trends" class="section-container">
-        <h2 class="title">Trends do Momento</h2>
-        <div class="grid" id="trends-grid">
-            <article class="card trend" onmouseenter="lerTexto('Trend: Máscara Labial Laneige. Sabor Berry. Preço 22 euros.')">
-                <img src="https://images.unsplash.com/photo-1590439471364-192aa70c0b53?w=300" alt="Máscara Labial Laneige">
-                <h3>Laneige Lip Mask</h3>
-                <p>O favorito do TikTok.</p>
-                <span class="price">22.00€</span>
-                <button onclick="adicionar('Laneige')">Comprar</button>
-            </article>
-            <article class="card trend" onmouseenter="lerTexto('Trend: Buldak Ramen Carbonara. Muito picante. Preço 3 euros e 50.')">
-                <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?w=300" alt="Ramen Buldak">
-                <h3>Buldak Carbonara</h3>
-                <p>O ramen mais viral do mundo.</p>
-                <span class="price">3.50€</span>
-                <button onclick="adicionar('Buldak')">Comprar</button>
-            </article>
-        </div>
-    </section>
+<header>
+  <h1>Asian Beauty Store</h1>
+  <nav aria-label="Menu principal">
+    <ul>
+      <li><a href="#">Início</a></li>
+      <li><a href="#">Produtos</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <section id="catalogo" class="section-container">
-        <h2 class="title">Catálogo Completo</h2>
-        <div class="grid">
-            <article class="card" onmouseenter="lerTexto('Protetor Solar Beauty of Joseon. Arroz e Probióticos. 24 euros.')">
-                <img src="https://images.unsplash.com/photo-1617897903246-719242758050?w=300" alt="Protetor Solar">
-                <h3>Beauty of Joseon Sun</h3>
-                <span class="price">24.00€</span>
-                <button onclick="adicionar('Protetor Solar')">Adicionar</button>
-            </article>
-            <article class="card" onmouseenter="lerTexto('Sérum Madagascar Centella. Calmante para a pele. 19 euros.')">
-                <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=300" alt="Sérum Centella">
-                <h3>Centella Ampoule</h3>
-                <span class="price">19.00€</span>
-                <button onclick="adicionar('Sérum')">Adicionar</button>
-            </article>
-            <article class="card" onmouseenter="lerTexto('Mochi Japonês Tradicional. Caixa mista. 6 euros.')">
-                <img src="https://images.unsplash.com/photo-1542010589005-d1eabb39d231?w=300" alt="Mochi">
-                <h3>Mochi Mix Box</h3>
-                <span class="price">6.00€</span>
-                <button onclick="adicionar('Mochi')">Adicionar</button>
-            </article>
-            <article class="card" onmouseenter="lerTexto('Óleo de Limpeza Anua. Remove maquilhagem. 21 euros.')">
-                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=300" alt="Anua Oil">
-                <h3>Anua Heartleaf Oil</h3>
-                <span class="price">21.00€</span>
-                <button onclick="adicionar('Óleo Anua')">Adicionar</button>
-            </article>
-            <article class="card" onmouseenter="lerTexto('Bebida de Iogurte Coreana. Pack de 5 unidades. 4 euros.')">
-                <img src="https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?w=300" alt="Yakult">
-                <h3>Korean Yogurt Drink</h3>
-                <span class="price">4.50€</span>
-                <button onclick="adicionar('Bebida Iogurte')">Adicionar</button>
-            </article>
-            <article class="card" onmouseenter="lerTexto('Máscara de Tecido de Arroz. Hidratação profunda. 2 euros.')">
-                <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=300" alt="Sheet Mask">
-                <h3>Rice Sheet Mask</h3>
-                <span class="price">2.00€</span>
-                <button onclick="adicionar('Máscara Arroz')">Adicionar</button>
-            </article>
-            <article class="card" onmouseenter="lerTexto('Pausinhos de Aço Inox. Estilo Coreano. 8 euros.')">
-                <img src="https://images.unsplash.com/photo-1583946099379-f9c9cb8bc030?w=300" alt="Chopsticks">
-                <h3>Chopsticks Inox Set</h3>
-                <span class="price">8.00€</span>
-                <button onclick="adicionar('Pausinhos')">Adicionar</button>
-            </article>
-            <article class="card" onmouseenter="lerTexto('Chá Verde Matcha Premium. Origem Japão. 15 euros.')">
-                <img src="https://images.unsplash.com/photo-1582793988951-9aed5509eb97?w=300" alt="Matcha">
-                <h3>Matcha Tea Powder</h3>
-                <span class="price">15.00€</span>
-                <button onclick="adicionar('Matcha')">Adicionar</button>
-            </article>
-        </div>
-    </section>
+<main id="conteudo">
 
-    <section id="lojas" class="section-container stores">
-        <h2>Nossas Lojas</h2>
-        <p>Lisboa | Porto | Setúbal | Braga | Viana do Castelo</p>
-    </section>
+<section aria-labelledby="produtos">
+<h2 id="produtos">Produtos em destaque</h2>
 
-    <script src="script.js"></script>
+<div class="produto">
+  <img src="cosrx.jpg" alt="Sérum facial COSRX com mucina de caracol">
+  <h3>COSRX Snail Essence</h3>
+  <p>Essência hidratante regeneradora.</p>
+  <p class="preco">19,99€</p>
+  <button aria-label="Adicionar COSRX Snail Essence ao carrinho">
+    Adicionar ao carrinho
+  </button>
+</div>
+
+</section>
+</main>
+
+<footer>
+<p>© 2026 Asian Beauty Store</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>

@@ -1,3 +1,54 @@
-<button onclick="adicionarAoCarrinho('Mochi Mix Box', 12.99)">
-Adicionar ao carrinho
-</button>
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<title>Produtos</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+<h1>Produtos</h1>
+<a href="index.html">Voltar</a>
+</header>
+
+<main>
+
+<div class="grid-produtos">
+
+<!-- Produto 1 -->
+<div class="produto">
+<img src="imagens/beautyofjoseon.jpg" alt="Protetor solar Beauty of Joseon SPF50">
+<h3>Beauty of Joseon Relief Sun</h3>
+<p>Protetor solar leve com arroz fermentado.</p>
+<p class="preco">18,50€</p>
+<button onclick="adicionarAoCarrinho('Beauty of Joseon',18.50)">Adicionar</button>
+</div>
+
+<!-- Produto 2 -->
+<div class="produto">
+<img src="imagens/laneige.jpg" alt="Máscara labial Laneige">
+<h3>Laneige Lip Mask</h3>
+<p>Máscara hidratante noturna.</p>
+<p class="preco">22,00€</p>
+<button onclick="adicionarAoCarrinho('Laneige Lip Mask',22.00)">Adicionar</button>
+</div>
+
+<!-- Produto 3 -->
+<div class="produto">
+<img src="imagens/innisfree.jpg" alt="Sérum Innisfree chá verde">
+<h3>Innisfree Green Tea Serum</h3>
+<p>Hidratação profunda.</p>
+<p class="preco">24,90€</p>
+<button onclick="adicionarAoCarrinho('Innisfree Serum',24.90)">Adicionar</button>
+</div>
+
+<!-- Adiciona até 10 seguindo este modelo -->
+
+</div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

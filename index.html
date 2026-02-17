@@ -1,85 +1,127 @@
+HTML
 <!DOCTYPE html>
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beleza Asiática | Acessibilidade Total AA</title>
+    <title>Beleza Asiática | K-Beauty & J-Beauty Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <a href="#conteudo" class="skip-link">Saltar para o conteúdo principal</a>
+    <a href="#conteudo" class="skip-link">Saltar para o conteúdo</a>
 
     <header role="banner">
         <div class="logo">BELEZA ASIÁTICA</div>
         <nav aria-label="Menu Principal">
             <ul>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#dicas">Dicas de Uso</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#novidades">Novidades</a></li>
+                <li><a href="#categorias">Categorias</a></li>
+                <li><a href="#marcas">Marcas</a></li>
+                <li><a href="#lojas">Lojas</a></li>
             </ul>
         </nav>
     </header>
 
-    <section class="banner-hero" role="region" aria-label="Destaque">
-        <div class="hero-txt">
-            <h1>Cuidado Premium, Design para Todos</h1>
-            <p>Cosmética asiática com interface simplificada para uma navegação sem barreiras.</p>
-        </div>
-    </section>
-
     <main id="conteudo">
-        
-        <section id="produtos" class="seccao">
-            <h2 class="titulo">Os Nossos Essenciais</h2>
-            <div class="grid-layout">
-                
-                <article class="card">
-                    <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=400&q=80" alt="Frasco branco de creme facial hidratante de arroz">
-                    <div class="card-body">
-                        <h3>Creme Hidratante</h3>
-                        <p>Textura leve para peles sensíveis. Sem fragrâncias fortes.</p>
-                        <span class="preco">24,90€</span>
-                        <button aria-label="Comprar Creme Hidratante">Adicionar ao Carrinho</button>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=400&q=80" alt="Frasco de vidro com sérum de vitamina C">
-                    <div class="card-body">
-                        <h3>Sérum Iluminador</h3>
-                        <p>Extraído de raízes de Ginseng para brilho natural.</p>
-                        <span class="preco">32,00€</span>
-                        <button aria-label="Comprar Sérum Iluminador">Adicionar ao Carrinho</button>
-                    </div>
-                </article>
-
-                <article class="card">
-                    <img src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=400&q=80" alt="Tubo de protetor solar invisível">
-                    <div class="card-body">
-                        <h3>Protetor Solar</h3>
-                        <p>Proteção alta SPF 50. Não deixa resíduos brancos.</p>
-                        <span class="preco">19,90€</span>
-                        <button aria-label="Comprar Protetor Solar">Adicionar ao Carrinho</button>
-                    </div>
-                </article>
-
+        <section class="hero-premium">
+            <div class="hero-inner">
+                <h1>Hot on Social Media 🔥</h1>
+                <p>Os segredos da pele de porcelana que dominam as redes sociais.</p>
+                <button class="btn-largo">Ver tudo</button>
             </div>
         </section>
 
-        <section id="dicas" class="seccao-apoio">
-            <h2>Dicas de Acessibilidade Auditiva</h2>
-            <p>Todos os nossos vídeos de demonstração contêm <strong>legendas descritivas</strong> e transcrições completas para utilizadores com dificuldades auditivas.</p>
+        <section class="quick-links">
+            <div class="link-item">Trending Now</div>
+            <div class="link-item">Novidades do Mês</div>
+            <div class="link-item">Novas Marcas 🔥</div>
+            <div class="link-item">Cartão Oferta Físico</div>
         </section>
 
+        <section id="novidades" class="seccao">
+            <h2 class="titulo-seccao">🧴 Cremes para o Rosto (Face)</h2>
+            <div class="grid-produtos">
+                <article class="produto-card">
+                    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=400" alt="Creme SKIN1004 Madagascar Centella">
+                    <h3>SKIN1004 Centella</h3>
+                    <p>Hidratação profunda com ácido hialurónico para pele sensível.</p>
+                    <span class="tag-beneficio">Hidratação & Barrier Care</span>
+                    <button>Adicionar ao Carrinho</button>
+                </article>
+
+                <article class="produto-card">
+                    <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=400" alt="Creme Anua Azelaic Acid">
+                    <h3>Anua Azelaic Acid 10+</h3>
+                    <p>Combate manchas e irritações de forma suave.</p>
+                    <span class="tag-beneficio">Função Específica</span>
+                    <button>Adicionar ao Carrinho</button>
+                </article>
+
+                <article class="produto-card">
+                    <img src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=400" alt="Protetor Beauty of Joseon Sun Rice">
+                    <h3>Beauty of Joseon Sun Rice</h3>
+                    <p>Protetor solar calmante com probióticos.</p>
+                    <span class="tag-beneficio">Proteção Solar</span>
+                    <button>Adicionar ao Carrinho</button>
+                </article>
+            </div>
+        </section>
+
+        <section class="seccao bg-suave">
+            <h2 class="titulo-seccao">🛁 Cuidados de Corpo (Body Care)</h2>
+            <div class="grid-produtos">
+                <article class="produto-card">
+                    <img src="https://images.unsplash.com/photo-1556229167-73fe68097940?auto=format&fit=crop&w=400" alt="Loção Klairs All-Over">
+                    <h3>Klairs All-Over Lotion</h3>
+                    <p>Loção leve e hidratante para o corpo inteiro.</p>
+                    <span class="tag-beneficio">Hidratação Essencial</span>
+                    <button>Adicionar ao Carrinho</button>
+                </article>
+
+                <article class="produto-card">
+                    <img src="https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?auto=format&fit=crop&w=400" alt="Rich Soymilk Body Cream">
+                    <h3>Rich Soymilk Cream</h3>
+                    <p>Creme de soja rico para deixar o corpo nutrido e suave.</p>
+                    <span class="tag-beneficio">Ingredientes Especiais</span>
+                    <button>Adicionar ao Carrinho</button>
+                </article>
+            </div>
+        </section>
+
+        <section id="marcas" class="seccao">
+            <h2 class="titulo-seccao">Principais Marcas Asiáticas</h2>
+            <div class="grid-marcas">
+                <div class="marca-info">
+                    <h3>COSRX (K-Beauty)</h3>
+                    <p>Foco em ingredientes eficazes como Snail Mucin para reparação e brilho.</p>
+                </div>
+                <div class="marca-info">
+                    <h3>Hada Labo (J-Beauty)</h3>
+                    <p>A força do ácido hialurónico para hidratação japonesa profunda.</p>
+                </div>
+                <div class="marca-info">
+                    <h3>Beauty of Joseon</h3>
+                    <p>Ingredientes tradicionais como arroz e ginseng.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="lojas" class="seccao-lojas">
+            <div class="lojas-txt">
+                <h2>Onde encontrar as nossas Lojas</h2>
+                <p>📍 <strong>Lisboa:</strong> Avenida da Liberdade, 120</p>
+                <p>📍 <strong>Porto:</strong> Rua de Santa Catarina, 450</p>
+                <p>📍 <strong>Online:</strong> Entrega em 24h para todo o país.</p>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Beleza Asiática. Cumpre as normas EN 301 549 e WCAG 2.2 Nível AA.</p>
+        <p>&copy; 2026 Beleza Asiática. Design Acessível nível AAA.</p>
     </footer>
 
     <script>
-        // Função de voz para dificuldades visuais e intelectuais
         const sintetizador = window.speechSynthesis;
         function ler(texto) {
             sintetizador.cancel();
@@ -88,16 +130,9 @@
             sintetizador.speak(fala);
         }
 
-        document.querySelectorAll('h1, h2, h3, p, button, a, img').forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                let texto = el.tagName === 'IMG' ? "Imagem: " + el.alt : el.innerText;
-                ler(texto);
-                el.classList.add('foco-visual');
-            });
-            el.addEventListener('mouseleave', () => {
-                sintetizador.cancel();
-                el.classList.remove('foco-visual');
-            });
+        document.querySelectorAll('h1, h2, h3, p, button, .link-item').forEach(el => {
+            el.addEventListener('mouseenter', () => ler(el.innerText));
+            el.addEventListener('mouseleave', () => sintetizador.cancel());
         });
     </script>
 </body>

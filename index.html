@@ -1,23 +1,49 @@
 <!DOCTYPE html>
-<html lang="pt">
-<head>
+<html lang="pt"> <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projeto de Conceção Web - Carina Rocha</title>
-    <style>
-        /* CSS básico para usabilidade: cores legíveis e letra clara */
-        body { font-family: sans-serif; line-height: 1.6; padding: 20px; color: #333; }
-        header { border-bottom: 2px solid #0056b3; margin-bottom: 20px; }
-        main { max-width: 800px; margin: auto; }
-    </style>
+    <title>Beleza Asiática - Acessível para Todos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+    <a href="#conteudo-principal" class="pular-link">Saltar para o conteúdo principal</a>
+
     <header>
-        <h1>Bem-vindo ao meu Projeto</h1>
+        <h1>Loja de Cremes Asiáticos</h1>
+        <nav aria-label="Menu principal">
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Cremes Faciais</a></li>
+                <li><a href="#">Séruns</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
     </header>
-    <main>
-        <p>Este site está a ser desenvolvido para a disciplina de Conceção de Website.</p>
-        <p><strong>Foco:</strong> Usabilidade e Acessibilidade.</p>
+
+    <main id="conteudo-principal">
+        <section>
+            <h2>Os Nossos Favoritos</h2>
+            
+            <article class="produto">
+                <img src="https://via.placeholder.com/300" alt="Frasco de creme facial hidratante com extrato de arroz em tons de branco e azul">
+                <h3>Creme de Arroz Hidratante</h3>
+                <p>Ideal para peles sensíveis. Proporciona uma hidratação profunda e brilho natural.</p>
+                <button aria-label="Comprar Creme de Arroz Hidratante">Comprar - 25€</button>
+            </article>
+
+            <article class="produto">
+                <img src="https://via.placeholder.com/300" alt="Sérum reparador de baba de caracol em frasco de vidro âmbar">
+                <h3>Sérum Reparador</h3>
+                <p>O segredo da pele de porcelana asiática, agora ao seu alcance.</p>
+                <button aria-label="Comprar Sérum Reparador">Comprar - 30€</button>
+            </article>
+        </section>
     </main>
+
+    <footer>
+        <p>&copy; 2026 Beleza Asiática. Site desenhado com foco em acessibilidade total.</p>
+    </footer>
+
 </body>
 </html>

@@ -1,0 +1,26 @@
+/* Cores de alto contraste para acessibilidade */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.8;
+    color: #1a1a1a; /* Cinza quase preto para leitura fácil */
+    background-color: #ffffff;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Deixar o site bonito em telemóveis */
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Links fáceis de identificar */
+a {
+    color: #0056b3;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* Feedback visual para navegação por teclado (fundamental para a nota!) */
+a:focus {
+    outline: 3px solid #ffcc00;

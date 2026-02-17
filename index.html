@@ -3,134 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beleza Asiática | Skincare Premium & Acessível</title>
+    <title>Beleza Asiática | Acessibilidade Total AA</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <a href="#conteudo-principal" class="pular-link">Saltar para o conteúdo principal</a>
+    <a href="#conteudo" class="skip-link">Saltar para o conteúdo principal</a>
 
-    <div class="top-bar">
-        OFERTA DE AMOSTRAS EM TODAS AS ENCOMENDAS | <strong>ENTREGA GRÁTIS EM 24H</strong>
-    </div>
-
-    <header>
+    <header role="banner">
         <div class="logo">BELEZA ASIÁTICA</div>
-        <nav aria-label="Navegação Principal">
+        <nav aria-label="Menu Principal">
             <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#produtos">Loja</a></li>
-                <li><a href="#dicas">Dicas</a></li>
-                <li><a href="#newsletter">Contacto</a></li>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#dicas">Dicas de Uso</a></li>
+                <li><a href="#contacto">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main id="conteudo-principal">
+    <section class="banner-hero" role="region" aria-label="Destaque">
+        <div class="hero-txt">
+            <h1>Cuidado Premium, Design para Todos</h1>
+            <p>Cosmética asiática com interface simplificada para uma navegação sem barreiras.</p>
+        </div>
+    </section>
+
+    <main id="conteudo">
         
-        <section id="inicio" class="hero" aria-label="Destaque: Ritual Coreano">
-            <div class="hero-content">
-                <span class="badge">Novidade</span>
-                <h1>A Magia da Pele de Vidro</h1>
-                <p>Produtos autênticos importados diretamente de Seul para a sua rotina diária.</p>
-                <button class="btn-hero" onclick="document.getElementById('produtos').scrollIntoView()">Explorar Coleção</button>
-            </div>
-        </section>
-
-        <section class="section-padding">
-            <h2 class="titulo-central">Categorias de Luxo</h2>
-            <div class="grid-categorias">
-                <div class="cat-item"><div class="cat-icon">✨</div><span>Limpeza</span></div>
-                <div class="cat-item"><div class="cat-icon">💧</div><span>Séruns</span></div>
-                <div class="cat-item"><div class="cat-icon">🌸</div><span>Cremes</span></div>
-                <div class="cat-item"><div class="cat-icon">🛡️</div><span>Solar</span></div>
-            </div>
-        </section>
-
-        <section id="produtos" class="section-padding bg-light">
-            <h2 class="titulo-central">Favoritos da Comunidade</h2>
-            <div class="container-produtos">
+        <section id="produtos" class="seccao">
+            <h2 class="titulo">Os Nossos Essenciais</h2>
+            <div class="grid-layout">
                 
-                <article class="produto-card">
-                    <div class="tag">Mais Vendido</div>
-                    <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=500&q=80" alt="Creme de Arroz Bio para hidratação intensa">
-                    <div class="info">
-                        <h3>Creme de Arroz Bio</h3>
-                        <p>Hidratação profunda com extrato natural.</p>
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=400&q=80" alt="Frasco branco de creme facial hidratante de arroz">
+                    <div class="card-body">
+                        <h3>Creme Hidratante</h3>
+                        <p>Textura leve para peles sensíveis. Sem fragrâncias fortes.</p>
                         <span class="preco">24,90€</span>
-                        <button class="btn-comprar" aria-label="Comprar Creme de Arroz">Adicionar ao Carrinho</button>
+                        <button aria-label="Comprar Creme Hidratante">Adicionar ao Carrinho</button>
                     </div>
                 </article>
 
-                <article class="produto-card">
-                    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=500&q=80" alt="Sérum Glow com Vitamina C e Ginseng">
-                    <div class="info">
-                        <h3>Sérum Glow Real</h3>
-                        <p>Ilumina o rosto e reduz manchas.</p>
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=400&q=80" alt="Frasco de vidro com sérum de vitamina C">
+                    <div class="card-body">
+                        <h3>Sérum Iluminador</h3>
+                        <p>Extraído de raízes de Ginseng para brilho natural.</p>
                         <span class="preco">32,00€</span>
-                        <button class="btn-comprar" aria-label="Comprar Sérum Glow">Adicionar ao Carrinho</button>
+                        <button aria-label="Comprar Sérum Iluminador">Adicionar ao Carrinho</button>
                     </div>
                 </article>
 
-                <article class="produto-card">
-                    <img src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=500&q=80" alt="Protetor Solar Invisible de 50 FPS">
-                    <div class="info">
-                        <h3>Escudo Solar 50+</h3>
-                        <p>Textura leve sem resíduos brancos.</p>
+                <article class="card">
+                    <img src="https://images.unsplash.com/photo-1617897903246-719242758050?auto=format&fit=crop&w=400&q=80" alt="Tubo de protetor solar invisível">
+                    <div class="card-body">
+                        <h3>Protetor Solar</h3>
+                        <p>Proteção alta SPF 50. Não deixa resíduos brancos.</p>
                         <span class="preco">19,90€</span>
-                        <button class="btn-comprar" aria-label="Comprar Protetor Solar">Adicionar ao Carrinho</button>
+                        <button aria-label="Comprar Protetor Solar">Adicionar ao Carrinho</button>
                     </div>
                 </article>
 
             </div>
         </section>
 
-        <section id="dicas" class="section-padding dica-section">
-            <div class="dica-container">
-                <h2>Sabia que...?</h2>
-                <p>"A aplicação do sérum deve ser feita com leves batidas na pele para melhor absorção, nunca esfregando."</p>
-            </div>
+        <section id="dicas" class="seccao-apoio">
+            <h2>Dicas de Acessibilidade Auditiva</h2>
+            <p>Todos os nossos vídeos de demonstração contêm <strong>legendas descritivas</strong> e transcrições completas para utilizadores com dificuldades auditivas.</p>
         </section>
 
     </main>
 
-    <footer id="newsletter">
-        <div class="footer-grid">
-            <div class="footer-info">
-                <h3>BELEZA ASIÁTICA</h3>
-                <p>O seu destino de confiança para K-Beauty em Portugal.</p>
-            </div>
-            <div class="footer-form">
-                <h4>Receba Dicas de Beleza</h4>
-                <div class="input-group">
-                    <input type="email" placeholder="O seu e-mail" aria-label="Subscrever Newsletter">
-                    <button>OK</button>
-                </div>
-            </div>
-        </div>
-        <p class="copyright">&copy; 2026 Beleza Asiática - Site 100% Acessível.</p>
+    <footer>
+        <p>&copy; 2026 Beleza Asiática. Cumpre as normas EN 301 549 e WCAG 2.2 Nível AA.</p>
     </footer>
 
     <script>
-        const voz = window.speechSynthesis;
-        function lerTexto(texto) {
-            voz.cancel();
+        // Função de voz para dificuldades visuais e intelectuais
+        const sintetizador = window.speechSynthesis;
+        function ler(texto) {
+            sintetizador.cancel();
             const fala = new SpeechSynthesisUtterance(texto);
             fala.lang = 'pt-PT';
-            voz.speak(fala);
+            sintetizador.speak(fala);
         }
 
-        const itens = document.querySelectorAll('h1, h2, h3, p, .btn-comprar, .btn-hero, .cat-item, .top-bar, img');
-        
-        itens.forEach(item => {
-            item.addEventListener('mouseenter', () => {
-                const textoParaLer = item.tagName === 'IMG' ? "Imagem: " + item.alt : item.innerText;
-                lerTexto(textoParaLer);
-                item.style.boxShadow = "0 0 10px #e5007e"; // Destaque visual
+        document.querySelectorAll('h1, h2, h3, p, button, a, img').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                let texto = el.tagName === 'IMG' ? "Imagem: " + el.alt : el.innerText;
+                ler(texto);
+                el.classList.add('foco-visual');
             });
-            item.addEventListener('mouseleave', () => {
-                voz.cancel();
-                item.style.boxShadow = "none";
+            el.addEventListener('mouseleave', () => {
+                sintetizador.cancel();
+                el.classList.remove('foco-visual');
             });
         });
     </script>

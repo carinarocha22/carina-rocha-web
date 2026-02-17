@@ -2,95 +2,100 @@
 <html lang="pt-PT">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo Asiático | Experiência Total</title>
+    <title>Mundo Asiático | Premium Store</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <a href="#conteudo" class="skip-link">Saltar para o conteúdo</a>
-
-    <div class="acc-panel" role="complementary">
-        <button onclick="toggleVoz()" id="btn-voz" aria-label="Ativar guia por voz">🔊 Guia de Voz: OFF</button>
-        <button onclick="toggleContraste()" aria-label="Alternar alto contraste">🌓 Contraste</button>
-    </div>
-
-    <header>
+    <nav class="navbar">
         <div class="logo">MUNDO <span>ASIÁTICO</span></div>
-        <nav>
-            <ul class="nav-links">
-                <li><a href="#trends">Trends 🔥</a></li>
-                <li><a href="#produtos">Catálogo</a></li>
-                <li><a href="#lojas">Nossas Lojas 📍</a></li>
-            </ul>
-        </nav>
-    </header>
+        <ul>
+            <li><a href="#trends">Trends 🔥</a></li>
+            <li><a href="#catalogo">Catálogo 🧴</a></li>
+            <li><a href="#lojas">Lojas 📍</a></li>
+        </ul>
+        <div class="cart-status">🛒 Itens: <span id="cart-count">0</span></div>
+    </nav>
 
-    <main id="conteudo">
-        <section id="trends" class="trends-section">
-            <h2 class="title-glow">Trending Now 🔥</h2>
-            <div class="trends-container">
-                <article class="trend-card">
-                    <div class="trend-badge">#1 TikTok Viral</div>
-                    <img src="https://images.unsplash.com/photo-1590439471364-192aa70c0b53?auto=format&fit=crop&w=400" alt="Bálsamo labial brilhante da Laneige">
-                    <div class="trend-info">
-                        <h3>Lip Sleeping Mask - Berry</h3>
-                        <p>O segredo dos lábios perfeitos que parou a internet.</p>
-                        <button class="btn-buy" onclick="adicionarCarrinho('Lip Mask', 22.00)">Comprar Trend</button>
-                    </div>
-                </article>
+    <section id="trends" class="section-container">
+        <h2 class="title">Trends do Momento</h2>
+        <div class="grid" id="trends-grid">
+            <article class="card trend" onmouseenter="lerTexto('Trend: Máscara Labial Laneige. Sabor Berry. Preço 22 euros.')">
+                <img src="https://images.unsplash.com/photo-1590439471364-192aa70c0b53?w=300" alt="Máscara Labial Laneige">
+                <h3>Laneige Lip Mask</h3>
+                <p>O favorito do TikTok.</p>
+                <span class="price">22.00€</span>
+                <button onclick="adicionar('Laneige')">Comprar</button>
+            </article>
+            <article class="card trend" onmouseenter="lerTexto('Trend: Buldak Ramen Carbonara. Muito picante. Preço 3 euros e 50.')">
+                <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?w=300" alt="Ramen Buldak">
+                <h3>Buldak Carbonara</h3>
+                <p>O ramen mais viral do mundo.</p>
+                <span class="price">3.50€</span>
+                <button onclick="adicionar('Buldak')">Comprar</button>
+            </article>
+        </div>
+    </section>
 
-                <article class="trend-card">
-                    <div class="trend-badge">Hot Snack</div>
-                    <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=400" alt="Prato de Buldak Ramen ultra picante">
-                    <div class="trend-info">
-                        <h3>Buldak Carbonara Ramen</h3>
-                        <p>O desafio picante mais amado pelos criadores de conteúdo.</p>
-                        <button class="btn-buy" onclick="adicionarCarrinho('Buldak Ramen', 3.50)">Adicionar</button>
-                    </div>
-                </article>
-            </div>
-        </section>
+    <section id="catalogo" class="section-container">
+        <h2 class="title">Catálogo Completo</h2>
+        <div class="grid">
+            <article class="card" onmouseenter="lerTexto('Protetor Solar Beauty of Joseon. Arroz e Probióticos. 24 euros.')">
+                <img src="https://images.unsplash.com/photo-1617897903246-719242758050?w=300" alt="Protetor Solar">
+                <h3>Beauty of Joseon Sun</h3>
+                <span class="price">24.00€</span>
+                <button onclick="adicionar('Protetor Solar')">Adicionar</button>
+            </article>
+            <article class="card" onmouseenter="lerTexto('Sérum Madagascar Centella. Calmante para a pele. 19 euros.')">
+                <img src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=300" alt="Sérum Centella">
+                <h3>Centella Ampoule</h3>
+                <span class="price">19.00€</span>
+                <button onclick="adicionar('Sérum')">Adicionar</button>
+            </article>
+            <article class="card" onmouseenter="lerTexto('Mochi Japonês Tradicional. Caixa mista. 6 euros.')">
+                <img src="https://images.unsplash.com/photo-1542010589005-d1eabb39d231?w=300" alt="Mochi">
+                <h3>Mochi Mix Box</h3>
+                <span class="price">6.00€</span>
+                <button onclick="adicionar('Mochi')">Adicionar</button>
+            </article>
+            <article class="card" onmouseenter="lerTexto('Óleo de Limpeza Anua. Remove maquilhagem. 21 euros.')">
+                <img src="https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=300" alt="Anua Oil">
+                <h3>Anua Heartleaf Oil</h3>
+                <span class="price">21.00€</span>
+                <button onclick="adicionar('Óleo Anua')">Adicionar</button>
+            </article>
+            <article class="card" onmouseenter="lerTexto('Bebida de Iogurte Coreana. Pack de 5 unidades. 4 euros.')">
+                <img src="https://images.unsplash.com/photo-1563227812-0ea4c22e6cc8?w=300" alt="Yakult">
+                <h3>Korean Yogurt Drink</h3>
+                <span class="price">4.50€</span>
+                <button onclick="adicionar('Bebida Iogurte')">Adicionar</button>
+            </article>
+            <article class="card" onmouseenter="lerTexto('Máscara de Tecido de Arroz. Hidratação profunda. 2 euros.')">
+                <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=300" alt="Sheet Mask">
+                <h3>Rice Sheet Mask</h3>
+                <span class="price">2.00€</span>
+                <button onclick="adicionar('Máscara Arroz')">Adicionar</button>
+            </article>
+            <article class="card" onmouseenter="lerTexto('Pausinhos de Aço Inox. Estilo Coreano. 8 euros.')">
+                <img src="https://images.unsplash.com/photo-1583946099379-f9c9cb8bc030?w=300" alt="Chopsticks">
+                <h3>Chopsticks Inox Set</h3>
+                <span class="price">8.00€</span>
+                <button onclick="adicionar('Pausinhos')">Adicionar</button>
+            </article>
+            <article class="card" onmouseenter="lerTexto('Chá Verde Matcha Premium. Origem Japão. 15 euros.')">
+                <img src="https://images.unsplash.com/photo-1582793988951-9aed5509eb97?w=300" alt="Matcha">
+                <h3>Matcha Tea Powder</h3>
+                <span class="price">15.00€</span>
+                <button onclick="adicionar('Matcha')">Adicionar</button>
+            </article>
+        </div>
+    </section>
 
-        <section id="lojas" class="stores-section">
-            <h2>Visite o nosso Mundo 📍</h2>
-            <div class="stores-grid">
-                <div class="store-info" role="address">
-                    <h3>Lisboa - Flagship Store</h3>
-                    <p>Rua Augusta, 150 - Baixa Pombalina</p>
-                    <p>🕒 10h - 20h</p>
-                </div>
-                <div class="store-info">
-                    <h3>Porto</h3>
-                    <p>Rua de Santa Catarina, 402</p>
-                    <p>🕒 10h - 22h</p>
-                </div>
-                <div class="store-info">
-                    <h3>Setúbal</h3>
-                    <p>Avenida Luísa Todi, 22</p>
-                    <p>🕒 09h - 19h</p>
-                </div>
-                <div class="store-info">
-                    <h3>Braga</h3>
-                    <p>Avenida da Liberdade, 88</p>
-                    <p>🕒 10h - 20h</p>
-                </div>
-                <div class="store-info">
-                    <h3>Viana do Castelo</h3>
-                    <p>Praça da República, 12</p>
-                    <p>🕒 10h - 19h</p>
-                </div>
-            </div>
-            <div class="map-placeholder" aria-label="Mapa ilustrativo das lojas em Portugal">
-                <p>[Mapa Interativo Ativo - Navegável via Teclado]</p>
-            </div>
-        </section>
-    </main>
-
-    <div class="cart-floating">
-        🛒 Carrinho: <span id="cart-val">0.00</span>€
-    </div>
+    <section id="lojas" class="section-container stores">
+        <h2>Nossas Lojas</h2>
+        <p>Lisboa | Porto | Setúbal | Braga | Viana do Castelo</p>
+    </section>
 
     <script src="script.js"></script>
 </body>

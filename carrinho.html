@@ -3,28 +3,27 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Carrinho - AsiaMarket</title>
-<link rel="stylesheet" href="css/style.css">
+<title>Carrinho</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <h1>AsiaMarket</h1>
-    <nav>
-        <a href="index.html">Início</a>
-        <a href="produtos.html">Produtos</a>
-        <a href="carrinho.html">Carrinho (<span id="cart-count">0</span>)</a>
-    </nav>
+<h1>AsiaMarket</h1>
+<nav>
+<a href="index.html">Início</a>
+<a href="produtos.html">Continuar Compras</a>
+</nav>
 </header>
 
 <section class="carrinho">
-    <h2>O Seu Carrinho</h2>
-    <div id="cart-items"></div>
-    <p>Total: <span id="total">0</span>€</p>
-    <a href="produtos.html" class="btn">Continuar a Comprar</a>
+<h2>O Seu Carrinho</h2>
+<div id="cart-items"></div>
+<p>Total: <span id="total">0</span>€</p>
+<button onclick="clearCart()">Limpar Carrinho</button>
 </section>
 
-<script src="js/script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

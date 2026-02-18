@@ -1,21 +1,40 @@
 let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
 
+function guardar() {
+    localStorage.setItem("carrinho", JSON.stringify(carrinho));
+}
+
 function adicionarCarrinho(nome, preco) {
     carrinho.push({ nome, preco });
-    localStorage.setItem("carrinho", JSON.stringify(carrinho));
-    alert("Produto adicionado ao carrinho!");
+    guardar();
+    alert(nome + " adicionado ao carrinho.");
+}
+
+function removerItem(index) {
+    carrinho.splice(index, 1);
+    guardar();
+    location.reload();
+}
+
+function limparCarrinho() {
+    carrinho = [];
+    guardar();
+    location.reload();
 }
 
 if (document.getElementById("lista-carrinho")) {
     let lista = document.getElementById("lista-carrinho");
     let total = 0;
 
-    carrinho.forEach(item => {
-        let p = document.createElement("p");
-        p.textContent = item.nome + " - " + item.preco + "€";
-        lista.appendChild(p);
+    if (carrinho.length === 0) {
+        lista.innerHTML = "<p>O carrinho está vazio.</p>";
+    }
+
+    carrinho.forEach((item, index) => {
+        let div = document.createElement("div");
+        div.innerHTML = item.nome + " - " + item.preco + "€ <button onclick='removerItem(" + index + ")'>Remover</button>";
+        lista.appendChild(div);
         total += item.preco;
     });
 
-    document.getElementById("total").textContent = "Total: " + total + "€";
-}
+    document.getElementById("

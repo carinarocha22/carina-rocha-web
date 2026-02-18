@@ -1,45 +1,72 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <title>Produtos - Carina Rocha</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Produtos</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <h1>Os Nossos Mochis</h1>
-    <nav>
-        <a href="index.html">Início</a>
-        <a href="produtos.html">Produtos</a>
-        <a href="carrinho.html">Carrinho</a>
-    </nav>
+<h1>Os Nossos Mochis</h1>
+<nav>
+<a href="index.html">Início</a>
+<a href="carrinho.html">Carrinho</a>
+</nav>
 </header>
 
-<section class="produtos">
+<main class="grid">
 
-    <div class="produto">
-        <h3>Mochi Matcha</h3>
-        <p>Creme japonês suave e delicado.</p>
-        <span>3€</span>
-        <button onclick="adicionarCarrinho('Mochi Matcha', 3)">Adicionar</button>
-    </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1587731556938-38755b4803a6" alt="Mochi de chocolate artesanal">
+<h3>Mochi Chocolate</h3>
+<p>Recheio cremoso de chocolate premium envolvido em massa suave de arroz.</p>
+<span>3€</span>
+<button onclick="adicionarCarrinho('Mochi Chocolate', 3)">Adicionar</button>
+</div>
 
-    <div class="produto">
-        <h3>Mochi Chocolate</h3>
-        <p>Chocolate intenso e cremoso.</p>
-        <span>3€</span>
-        <button onclick="adicionarCarrinho('Mochi Chocolate', 3)">Adicionar</button>
-    </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1604908176997-4314b8c8c4f3" alt="Mochi de chá verde matcha">
+<h3>Mochi Matcha</h3>
+<p>Delicado sabor a chá verde japonês com textura macia e equilibrada.</p>
+<span>3€</span>
+<button onclick="adicionarCarrinho('Mochi Matcha', 3)">Adicionar</button>
+</div>
 
-    <div class="produto">
-        <h3>Mochi Mix Box</h3>
-        <p>Caixa com seleção especial de sabores.</p>
-        <span>12€</span>
-        <button onclick="adicionarCarrinho('Mochi Mix Box', 12)">Adicionar</button>
-    </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1590080875793-5c2e3f95a79f" alt="Mochi de morango">
+<h3>Mochi Morango</h3>
+<p>Recheio frutado e fresco com toque doce natural.</p>
+<span>3€</span>
+<button onclick="adicionarCarrinho('Mochi Morango', 3)">Adicionar</button>
+</div>
 
-</section>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb" alt="Mochi de manga">
+<h3>Mochi Manga</h3>
+<p>Exótico e refrescante, perfeito para dias quentes.</p>
+<span>3€</span>
+<button onclick="adicionarCarrinho('Mochi Manga', 3)">Adicionar</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1551024601-bec78aea704b" alt="Mochi de coco">
+<h3>Mochi Coco</h3>
+<p>Sabor tropical suave com aroma delicado.</p>
+<span>3€</span>
+<button onclick="adicionarCarrinho('Mochi Coco', 3)">Adicionar</button>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1585238342024-78d387f4a707" alt="Caixa com seis mochis variados">
+<h3>Mochi Mix Box</h3>
+<p>Seleção com 6 sabores diferentes para experimentar.</p>
+<span>12€</span>
+<button onclick="adicionarCarrinho('Mochi Mix Box', 12)">Adicionar</button>
+</div>
+
+</main>
 
 <script src="script.js"></script>
 </body>

@@ -3,54 +3,48 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Produtos - AsiaMarket</title>
-<link rel="stylesheet" href="css/style.css">
+<title>Produtos</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <h1>AsiaMarket</h1>
-    <nav>
-        <a href="index.html">Início</a>
-        <a href="produtos.html">Produtos</a>
-        <a href="carrinho.html">Carrinho (<span id="cart-count">0</span>)</a>
-    </nav>
+<h1>AsiaMarket</h1>
+<nav>
+<a href="index.html">Início</a>
+<a href="carrinho.html">Carrinho (<span id="cart-count">0</span>)</a>
+</nav>
 </header>
 
-<section class="produtos">
-    <h2>Os Nossos Produtos</h2>
+<section class="grid">
 
-    <div class="grid">
+<div class="card" data-voice="Mochi japonês com sabores variados.">
+<img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f" alt="Mochi japonês colorido">
+<h3>Mochi Mix</h3>
+<p>Caixa com sabores tradicionais japoneses.</p>
+<span>6.99€</span>
+<button onclick="addToCart('Mochi Mix', 6.99)">Adicionar</button>
+</div>
 
-        <div class="card" tabindex="0" data-voice="Mochi artesanal com vários sabores tradicionais japoneses.">
-            <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f" alt="Mochi japonês">
-            <h3>Mochi Mix</h3>
-            <p>Caixa com sabores variados: matcha, manga e morango.</p>
-            <span>6.99€</span>
-            <button onclick="addToCart('Mochi Mix', 6.99)">Adicionar</button>
-        </div>
+<div class="card" data-voice="Molho de soja premium fermentado naturalmente.">
+<img src="https://images.unsplash.com/photo-1604908177362-4c7b4b76aa87" alt="Molho de soja">
+<h3>Molho de Soja</h3>
+<p>Fermentação natural e sabor intenso.</p>
+<span>4.50€</span>
+<button onclick="addToCart('Molho de Soja', 4.50)">Adicionar</button>
+</div>
 
-        <div class="card" tabindex="0" data-voice="Molho de soja premium fermentado naturalmente.">
-            <img src="https://images.unsplash.com/photo-1604908177362-4c7b4b76aa87" alt="Molho de soja">
-            <h3>Molho de Soja</h3>
-            <p>Fermentação natural, sabor intenso.</p>
-            <span>4.50€</span>
-            <button onclick="addToCart('Molho de Soja', 4.50)">Adicionar</button>
-        </div>
+<div class="card" data-voice="Chá verde japonês aromático.">
+<img src="https://images.unsplash.com/photo-1518976024611-488c7c3e90d5" alt="Chá verde japonês">
+<h3>Chá Verde</h3>
+<p>Folhas selecionadas com aroma delicado.</p>
+<span>5.20€</span>
+<button onclick="addToCart('Chá Verde', 5.20)">Adicionar</button>
+</div>
 
-        <div class="card" tabindex="0" data-voice="Kit de maquilhagem coreana com acabamento natural.">
-            <img src="https://images.unsplash.com/photo-1583001809865-3a6b5d9a4d68" alt="Maquilhagem coreana">
-            <h3>Kit Maquilhagem Coreana</h3>
-            <p>Base leve, sombras suaves e blush natural.</p>
-            <span>24.99€</span>
-            <button onclick="addToCart('Kit Maquilhagem', 24.99)">Adicionar</button>
-        </div>
-
-    </div>
 </section>
 
-<script src="js/script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
-

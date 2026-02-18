@@ -1,34 +1,94 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AsiaMarket</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beleza Asiática Beauty</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
 
+<!-- HEADER -->
 <header>
-<h1>AsiaMarket</h1>
-<nav>
-<a href="index.html">Início</a>
-<a href="produtos.html">Produtos</a>
-<a href="carrinho.html">Carrinho (<span id="cart-count">0</span>)</a>
-</nav>
+    <div class="logo">Beleza Asiática</div>
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="sobre.html">Sobre Nós</a>
+        <a href="contactos.html">Contactos</a>
+        <a href="#" id="cart-icon">Carrinho (<span id="cart-count">0</span>)</a>
+    </nav>
 </header>
 
-<section class="hero" data-voice="Bem-vindo à AsiaMarket. Loja online de produtos asiáticos autênticos.">
-<h2>Produtos Asiáticos Autênticos</h2>
-<p>Sabores, cultura e tradição da Ásia num só lugar.</p>
-<a href="produtos.html" class="btn">Explorar Produtos</a>
+<!-- HERO -->
+<section class="hero" data-voice="Bem-vindo à Beleza Asiática Beauty. Descubra produtos autênticos asiáticos de alta qualidade.">
+    <div class="hero-content">
+        <h1>Beleza Asiática</h1>
+        <p>Rituais de beleza. Inovação. Elegância.</p>
+        <a href="produtos.html" class="btn" data-voice="Explorar produtos">Explorar Produtos</a>
+    </div>
 </section>
 
-<section class="info">
-<h2>Sobre Nós</h2>
-<p>Selecionamos produtos do Japão, Coreia, China e Tailândia, garantindo qualidade e autenticidade.</p>
+<!-- CATEGORIAS -->
+<section class="categorias">
+    <h2 data-voice="Explore as categorias de produtos">Categorias</h2>
+    <div class="categoria-grid">
+        <div class="categoria-card" data-voice="Skincare">
+            <img src="assets/images/skincare.jpg" alt="Produtos de cuidado da pele">
+            <span>Skincare</span>
+        </div>
+        <div class="categoria-card" data-voice="Maquilhagem">
+            <img src="assets/images/makeup.jpg" alt="Produtos de maquilhagem">
+            <span>Maquilhagem</span>
+        </div>
+        <div class="categoria-card" data-voice="Haircare">
+            <img src="assets/images/haircare.jpg" alt="Produtos de cuidado do cabelo">
+            <span>Haircare</span>
+        </div>
+        <div class="categoria-card" data-voice="Corpo">
+            <img src="assets/images/bodycare.jpg" alt="Produtos de cuidado corporal">
+            <span>Corpo</span>
+        </div>
+        <div class="categoria-card" data-voice="Sets e Kits">
+            <img src="assets/images/kits.jpg" alt="Sets e kits de produtos asiáticos">
+            <span>Sets & Kits</span>
+        </div>
+    </div>
 </section>
 
-<script src="script.js"></script>
-</body>
-</html>
+<!-- PRODUTOS EM DESTAQUE -->
+<section class="produtos-destaque">
+    <h2 data-voice="Produtos em destaque">Produtos em Destaque</h2>
+    <div class="grid-produtos">
+        <!-- Produto 1 -->
+        <div class="card-produto" data-voice="Laneige Water Sleeping Mask, máscara de noite hidratante, preço 23 euros">
+            <img src="assets/images/laneige.jpg" alt="Laneige Water Sleeping Mask">
+            <h3>Laneige Water Sleeping Mask</h3>
+            <p>Máscara de noite que hidrata profundamente a pele.</p>
+            <span>23€</span>
+            <button onclick="addToCart('Laneige Water Sleeping Mask',23)" data-voice="Adicionar Laneige ao carrinho">Adicionar ao Carrinho</button>
+        </div>
+        <!-- Produto 2 -->
+        <div class="card-produto" data-voice="Innisfree Green Tea Serum, sérum revitalizante, preço 18 euros">
+            <img src="assets/images/innisfree.jpg" alt="Innisfree Green Tea Serum">
+            <h3>Innisfree Green Tea Serum</h3>
+            <p>Sérum revitalizante e antioxidante com chá verde coreano.</p>
+            <span>18€</span>
+            <button onclick="addToCart('Innisfree Green Tea Serum',18)">Adicionar ao Carrinho</button>
+        </div>
+        <!-- Produto 3 -->
+        <div class="card-produto" data-voice="COSRX Advanced Snail 96 Mucin Power Essence, preço 20 euros">
+            <img src="assets/images/cosrx.jpg" alt="COSRX Advanced Snail Essence">
+            <h3>COSRX Snail Essence</h3>
+            <p>Essência com 96% de mucina de caracol, repara e hidrata.</p>
+            <span>20€</span>
+            <button onclick="addToCart('COSRX Snail Essence',20)">Adicionar ao Carrinho</button>
+        </div>
+        <!-- Produto 4 -->
+        <div class="card-produto" data-voice="Shiseido Ultimune Power Infusing Concentrate, preço 45 euros">
+            <img src="assets/images/shiseido.jpg" alt="Shiseido Ultimune Concentrate">
+            <h3>Shiseido Ultimune Concentrate</h3>
+            <p>Concentrado fortalecedor da pele para antioxidantes e vitalidade.</p>
+            <span>45€</span>
+            <button onclick="addToCart('Shiseido Ultimune Concentrate',45)
+

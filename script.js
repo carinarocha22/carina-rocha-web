@@ -1,40 +1,52 @@
-let carrinho = JSON.parse(localStorage.getItem("carrinho")) || [];
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-function guardar() {
-    localStorage.setItem("carrinho", JSON.stringify(carrinho));
+function updateCartCount(){
+    document.querySelectorAll("#cart-count").forEach(el=>{
+        el.textContent = cart.length;
+    });
 }
 
-function adicionarCarrinho(nome, preco) {
-    carrinho.push({ nome, preco });
-    guardar();
-    alert(nome + " adicionado ao carrinho.");
+function addToCart(name, price){
+    cart.push({name, price});
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartCount();
+    speak(name + " adicionado ao carrinho");
 }
 
-function removerItem(index) {
-    carrinho.splice(index, 1);
-    guardar();
-    location.reload();
-}
+function loadCart(){
+    const cartItems = document.getElementById("cart-items");
+    const totalEl = document.getElementById("total");
+    if(!cartItems) return;
 
-function limparCarrinho() {
-    carrinho = [];
-    guardar();
-    location.reload();
-}
-
-if (document.getElementById("lista-carrinho")) {
-    let lista = document.getElementById("lista-carrinho");
     let total = 0;
+    cartItems.innerHTML = "";
 
-    if (carrinho.length === 0) {
-        lista.innerHTML = "<p>O carrinho está vazio.</p>";
-    }
-
-    carrinho.forEach((item, index) => {
-        let div = document.createElement("div");
-        div.innerHTML = item.nome + " - " + item.preco + "€ <button onclick='removerItem(" + index + ")'>Remover</button>";
-        lista.appendChild(div);
-        total += item.preco;
+    cart.forEach(item=>{
+        cartItems.innerHTML += `<p>${item.name} - ${item.price}€</p>`;
+        total += item.price;
     });
 
-    document.getElementById("
+    totalEl.textContent = total.toFixed(2);
+}
+
+function speak(text){
+    const speech = new SpeechSynthesisUtterance(text);
+    speech.lang = "pt-PT";
+    window.speechSynthesis.speak(speech);
+}
+
+document.addEventListener("mouseover", function(e){
+    const text = e.target.closest("[data-voice]");
+    if(text){
+        speak(text.getAttribute("data-voice"));
+    }
+});
+
+document.addEventListener("focusin", function(e){
+    if(e.target.dataset.voice){
+        speak(e.target.dataset.voice);
+    }
+});
+
+updateCartCount();
+loadCart();
